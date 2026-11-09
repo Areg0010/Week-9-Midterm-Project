@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | House of Gianna</title>
+    <meta name="description" content="Get in touch with House of Gianna for inquiries, collaborations, or customer support.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <p class="site-title"><a href="index.html" class="site-title__link">House of Gianna</a></p>
+            <nav aria-label="primary">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="supply-chain.html">Supply Chain</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <h1>Contact Us</h1>
+        <p class="lead">We would love to hear from you! Please fill out the form below or reach us through our social media channels.</p>
+
+        <section aria-labelledby="contact-form-title">
+            <h2 id="contact-form-title">Send an inquiry</h2>
+            <p class="hint">All fields are required unless marked optional.</p>
+
+            <!-- POST is used because we are submitting data to the server -->
+            <form action="#" method="post">
+                <div class="contact-form">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">Select a topic</option>
+                        <option value="collections">Collections</option>
+                        <option value="orders">Order enquiry</option>
+                        <option value="supply-chain">Supply chain</option>
+                        <option value="other">Something else</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>Preferred Contact Method</legend>
+                    <div class="radio-row">
+                        <input type="radio" id="reply-email" name="reply-method" value="email" checked>
+                        <label for="reply-email">Email</label>
+                    </div>
+                    <div class="radio-row">
+                        <input type="radio" id="reply-phone" name="reply-method" value="phone">
+                        <label for="reply-phone">Phone</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button class="button" type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <nav aria-label="Footer">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="supply-chain.html">Supply Chain</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">&copy; 2026 House of Gianna. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

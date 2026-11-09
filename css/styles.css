@@ -1,0 +1,286 @@
+/* House of Gianna-midterm site styles */
+
+:root {
+    --primary-color: #2a1f1a;
+    --accent-color: #8a3b2a;
+    --secondary-color: #f5f5f5;
+    --background-color: #8a3b2a;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  text-underline-offset: 0.15rem;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Visible focus styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* Skip to content link styles */
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-120%);
+    z-index: 10;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Header and navigation styles */
+.site-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-bottom: 1px solid var(--accent-color);
+  padding: 1rem 1.25rem;
+}
+
+.site-header__inner {
+    max-width: 64rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.04rem;
+}
+
+.site-title a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+}
+
+.nav-list a {
+    display: inline-block;
+    padding: 0.4rem 0.25rem;
+    color: var(--primary-color);
+}
+
+.nav-list a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--accent-color);
+}
+
+/* Main content */
+main {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+.lead {
+    font-size: 1.3rem;
+}
+
+.hero {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@media (min-width: 48rem) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    background: var(--accent-color);
+    color: #fff;
+    border: 2px solid var(--accent-color);
+    border-radius: 0.25rem;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card {
+    background: var(--primary-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+.card h3 {
+    margin-top: 0.75rem;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: 0.95rem;
+    color: #5a4a40;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Supply chain steps */
+.steps {
+    padding-left: 1.25rem;
+}
+
+.steps li {
+    margin-bottom: 1rem;
+}
+
+/* Form */
+.form-field {
+    margin-bottom: 1.25rem;
+}
+
+label,
+legend {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.hint {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #5a4a40;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    max-width: 36rem;
+    padding: 0.6rem;
+    font: inherit;
+    color: var(--accent-color);
+    border: 2px solid #8a3b2a;
+    border-radius: 0.25rem;
+}
+
+fieldset {
+    border: 1px solid var(--accent-color);
+    padding: 1rem;
+    margin: 0 0 1.25rem;
+    max-width: 36rem;
+}
+
+.radio-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.radio-row label {
+    display: inline;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+}
+
+.site-footer__inner {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+.site-footer .nav-list a {
+    color: #fff;
+}
+
+.site-footer p {
+    margin: 0.75rem 0 0;
+    font-size: 0.95rem;
+}
